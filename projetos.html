@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Luce per Tutti</title>
+  <meta name="description" content="Conheça os projetos sociais da Luce per Tutti e como participar como voluntário ou doador." />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="brand"><img src="ImgLuz.jpg" alt="Luce per Tutti" /></a>
+      <nav class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Projetos</h1>
+    <p>Conheça nossos projetos e como você pode ajudar (voluntariado e doações).</p>
+
+    <section id="educacao" aria-labelledby="edu-title">
+      <h2 id="edu-title">Programa Educação</h2>
+      <p>Atividades semanais de reforço escolar.</p>
+      <ul>
+        <li><strong>Meta:</strong> 500 alunos por ano</li>
+        <li><strong>Impacto:</strong> melhoria no desempenho escolar</li>
+      </ul>
+    </section>
+
+    <section id="saude" aria-labelledby="saude-title">
+      <h2 id="saude-title">Saúde Comunitária</h2>
+      <p>Campanhas de prevenção e cuidado básico em comunidades.</p>
+    </section>
+
+    <section aria-labelledby="como-ajudar-title" class="help">
+      <h2 id="como-ajudar-title">Como ajudar</h2>
+      <p><a href="cadastro.html">Cadastre-se</a> como voluntário ou realizar doações via nossa plataforma segura.</p>
+      
+      <article class="donation">
+        <h3>Doações</h3>
+        <p>Progresso das metas de campanha.</p>
+        <progress value="75" max="100">45%</progress>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year-projects"></span> Luce per Tutti</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-projects').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
