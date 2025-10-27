@@ -1,20 +1,82 @@
-<!DOCTYPE html>
+<!<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organização voluntariado</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Luce per Tutti</title>
+  <meta name="description" content="ONG Exemplo: projetos sociais, voluntariado e transparência." />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <header>
-    <h1>Como é a nossa Organização</h1>
-<nav>
-    <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projeto.html">Projeto de voluntariado</a></li>
-        <li><a href="cadastro.html">Cadastro de voluntariado</a></li>
-    </ul>
-</nav>
-    </header>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Página inicial - ONG Exemplo">
+        <img src="assets/images/logo.png" alt="Logotipo ONG Exemplo" />
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+          <li><a href="#transparencia">Transparência</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Luce per Tutti</h1>
+      <p>Espalhando Luz, Salvando vidas.</p>
+      <p><a class="btn" href="projetos.html">Conheça nossos projetos</a></p>
+    </section>
+
+    <section class="about" aria-labelledby="about-title">
+      <h2 id="about-title">Missão, Visão e Valores</h2>
+      <p><strong>Missão:</strong> Promover inclusão social por meio de educação e suporte comunitário.</p>
+      <p><strong>Visão:</strong> Comunidades fortalecidas e autônomas.</p>
+      <p><strong>Valores:</strong> Transparência, respeito e colaboração.</p>
+    </section>
+
+    <section class="highlights" aria-labelledby="highlights-title">
+      <h2 id="highlights-title">Nossos números</h2>
+      <ul>
+        <li><strong>+35</strong> projetos ativos</li>
+        <li><strong>+1.200</strong> voluntários cadastrados</li>
+        <li><strong>+ R$ 2.000.000</strong> arrecadados no último ano</li>
+      </ul>
+    </section>
+
+    <section id="transparencia" class="transparency" aria-labelledby="trans-title">
+      <h2 id="trans-title">Transparência</h2>
+      <p>Relatórios financeiros, demonstrativos e prestação de contas disponíveis.</p>
+      <p><a href="#" class="link">Baixar último relatório (PDF)</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <address>
+        <strong>Luce per Tutti</strong><br/>
+        Rua Almirante Tamandaré, 100 — São Paulo — SP<br/>
+        <a href="tel:+5511999999999">+55 (11) 997253-9720</a><br/>
+        <a href="mailto:contato@ongexemplo.org">contato@lucepertutti.org</a>
+      </address>
+      <nav aria-label="Redes sociais">
+        <ul class="socials">
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container copyright">
+      <small>© <span id="year"></span>Luce per Tutti — Todos os direitos reservados</small>
+    </div>
+  </footer>
+
+  <script>
+    // pequeno script acessibilidade/utileza
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
