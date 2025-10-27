@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro — Voluntário / Doador</title>
+  <meta name="description" content="Formulário de cadastro para voluntários e doadores — ONG Exemplo." />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="brand"><img src="ImgLuz.jpg" alt="Luce per Tutti" /></a>
+      <nav class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Cadastro</h1>
+    <p>Preencha os dados abaixo. Campos marcados com * são obrigatórios.</p>
+
+    <form id="cadastroForm" action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <label for="nome">Nome completo *</label>
+        <input id="nome" name="nome" type="text" required minlength="3" />
+
+        <label for="email">E-mail *</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="cpf">CPF *</label>
+        <input id="cpf" name="cpf" type="text" inputmode="numeric"
+               pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+               placeholder="000.000.000-00" required aria-describedby="cpfHelp" />
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="tel" inputmode="tel"
+               placeholder="(00) 00000-0000" />
+
+        <label for="dataNasc">Data de Nascimento</label>
+        <input id="dataNasc" name="dataNasc" type="date" max="" />
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <label for="cep">CEP *</label>
+        <input id="cep" name="cep" type="text" inputmode="numeric"
+               pattern="\d{5}-\d{3}" placeholder="00000-000" required />
+
+        <label for="endereco">Endereço</label>
+        <input id="endereco" name="endereco" type="text" />
+
+        <div class="row">
+          <div class="col">
+            <label for="cidade">Cidade</label>
+            <input id="cidade" name="cidade" type="text" />
+          </div>
+          <div class="col">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" aria-label="Estado">
+              <option value="">Selecione</option>
+              <option value="SP">SP</option>
+              <option value="RJ">RJ</option>
+              <option value="MG">MG</option>
+              <!-- completar conforme necessário -->
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Interesses</legend>
+        <label><input type="checkbox" name="interesse" value="voluntariado"> Voluntariado</label>
+        <label><input type="checkbox" name="interesse" value="doacao"> Doação</label>
+        <label><input type="checkbox" name="interesse" value="newsletter"> Receber newsletter</label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn primary">Enviar cadastro</button>
+        <button type="reset" class="btn">Limpar</button>
+      </div>
+
+      <p id="cpfHelp" class="sr-only">Digite o CPF no formato 000.000.000-00.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year-cad"></span> ONG Exemplo</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+  <script>document.getElementById('year-cad').textContent = new Date().getFullYear();</script>
+</body>
+</html>
