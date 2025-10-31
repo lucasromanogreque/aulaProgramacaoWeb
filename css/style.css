@@ -1,59 +1,52 @@
-/* style.css */
-:root {
-  --cor-primaria: #004aad;
-  --cor-secundaria: #002b64;
-  --cor-fundo: #f4f4f4;
-  --cor-texto: #333;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ---------- BREAKPOINTS ---------- */
-
-/* 1️⃣ Mobile pequeno */
-@media (max-width: 480px) {
-  header {
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
+body {
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: rgb(0, 0, 0)
 }
 
-/* 2️⃣ Celulares grandes */
-@media (min-width: 481px) and (max-width: 768px) {
-  .container {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .col-6 {
-    grid-column: span 6;
-  }
+header {
+    background: linear-gradient(135deg, #c7d40e 0%, #06000c 100%);
+    color: rgb(15, 0, 0);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-/* 3️⃣ Tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
-  main {
-    padding: 2rem 4rem;
-  }
-}
-
-/* 4️⃣ Notebooks */
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .cards {
-    justify-content: space-around;
-  }
-}
-
-/* 5️⃣ Monitores grandes */
-@media (min-width: 1441px) {
-  body {
-    max-width: 1200px;
+nav{
+    max-width: 1000px;
     margin: 0 auto;
-  }
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    padding: 0 2rem;
+
+}
+
+nav ul{
+display: flex;
+list-style: none;
+gap: 2rem;
+
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    font-weight: 1000;
+    opacity: 0.5s;
+}
+
+nav a:hover,
+nav a.active{
+opacity: 3;
+font-weight: bold;
 }
