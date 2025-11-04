@@ -1,37 +1,38 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Luce per Tutti</title>
-  <meta name="description" content="Luce per Tutti: projetos sociais, voluntariado e transparência.">
+  <title>Projetos — Luce per Tutti</title>
+  <meta name="description" content="Conheça os projetos da Luce per Tutti.">
   <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-
   <header>
-    <nav>
-      <div>     
-    <h1 class="titulo">Luce per Tutti</h1>
-</div>
+    <nav class="navbar">
+      <div class="logo"><h1 class="titulo">Luce per Tutti</h1></div>
 
-<ul id="navMenu">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastre-se</a></li>
-        </ul>
-      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastre-se</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section class="hero hero-project">
+    <div class="container">
       <div class="hero-content">
-    <h1>Nossos projetos</h1>
+        <h1>Nossos projetos</h1>
       </div>
-    </section>
+    </div>
+  </section>
 
+  <main class="container">
     <section id="educacao" aria-labelledby="edu-title">
       <h2 id="edu-title">Programa Educação</h2>
       <p>Atividades semanais de reforço escolar.</p>
@@ -46,26 +47,52 @@
       <p>Campanhas de prevenção e cuidado básico em comunidades.</p>
     </section>
 
-    <section aria-labelledby="como-ajudar-title" class="help">
+    <section class="container" aria-labelledby="como-ajudar-title">
       <h2 id="como-ajudar-title">Como ajudar</h2>
-      <p><a href="cadastro.html">Cadastre-se</a> como voluntário ou realizar doações via nossa plataforma segura.</p>
+      <p><a href="cadastro.html" class="btn">Cadastre-se</a> como voluntário ou realize doações via nossa plataforma segura.</p>
 
       <article class="donation">
         <h3>Doações</h3>
         <p>Progresso das metas de campanha.</p>
-        <progress value="75" max="100">45%</progress>
+        <progress value="75" max="100">75%</progress>
       </article>
     </section>
+
+    <section class="container">
+      <h2>Projetos em destaque</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="badge">Educação</div>
+          <h3 class="card-title">Reforço Escolar</h3>
+          <p class="card-body">Aulas de apoio e materiais para alunos em situação de vulnerabilidade.</p>
+        </div>
+        <div class="card">
+          <div class="badge">Saúde</div>
+          <h3 class="card-title">Clínica Comunitária</h3>
+          <p class="card-body">Atendimentos básicos e campanhas de vacinação.</p>
+        </div>
+        <div class="card">
+          <div class="badge">Comunidade</div>
+          <h3 class="card-title">Apoio Familiar</h3>
+          <p class="card-body">Rodas de conversa e suporte psicossocial.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container">
       <p>© <span id="year-projects"></span> Luce per Tutti</p>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year-projects').textContent = new Date().getFullYear();
-  </script>
+  <div id="toast" class="toast" aria-live="polite" role="status" style="display:none"></div>
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-inner"><button class="modal-close" aria-label="Fechar">✕</button><div class="modal-body"></div></div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+  <script>document.getElementById('year-projects').textContent = new Date().getFullYear();</script>
 </body>
 </html>
