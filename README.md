@@ -1,5 +1,5 @@
 # aulaProgramacaoWeb
-# Plataforma ONG — Entrega 1 (HTML5 semântico)
+# Plataforma ONG — Entrega 2 (HTML5 semântico)
 
 ## O que está incluso
 - index.html — Página inicial institucional com informações de contato.
